@@ -26,7 +26,7 @@ func TestGenerateQRCodeGeneratesPNG(t *testing.T) {
 
 type ErrorWriter struct{}
 
-func (e *ErrorWriter) Write(b byte[]) (int, error) {
+func (e *ErrorWriter) Write(b []byte) (int, error) {
 	return 0, errors.New("Expected error")
 }
 
